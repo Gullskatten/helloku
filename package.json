@@ -1,0 +1,21 @@
+{
+  "name": "helloku",
+  "version": "1.0.0",
+  "description": "yes",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Espen S",
+  "license": "ISC",
+  "dependencies": {
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "fs": "0.0.2",
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.4",
+    "path": "^0.12.7"
+  }
+}
