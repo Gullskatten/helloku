@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const fs = require('fs');
 const browserify = require('browserify');
 const babelify = require('babelify');
-//const nodemon = require('gulp-nodemon');
+const nodemon = require('gulp-nodemon');
 
 gulp.task('bundle', function (){
   browserify({ debug: true })
@@ -12,7 +12,7 @@ gulp.task('bundle', function (){
     .on('error', function (err) { console.log('Error: ' + err.message); })
     .pipe(fs.createWriteStream('public/js/bundle.js'));
 })
-/*
+
 gulp.task('startServer', function () {
   nodemon({
     script: 'app.js',
@@ -20,10 +20,9 @@ gulp.task('startServer', function () {
     env: { 'NODE_ENV': 'development' }
   })
 })
-*/
 
 gulp.task('watch', function() {
   gulp.watch('source/js/**/*.js',['bundle']);
 });
 
-gulp.task('default', ['watch', 'bundle']);
+gulp.task('default', ['watch', 'bundle', 'startServer']);
